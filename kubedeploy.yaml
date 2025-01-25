@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-app
+  labels:
+    app: angular-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: angular-app
+  template:
+    metadata:
+      labels:
+        app: angular-app
+    spec:
+      # tolerations:
+      #   - key: "CriticalAddonsOnly"
+      #     operator: "Equal"
+      #     value: "true"
+      #     effect: "NoSchedule"
+      containers:
+        - name: angular-app
+          image: acrimageregistryust.azurecr.io/image-aks_demo_cicd  # Replace with your image name
+          ports:
+            - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: angular-app-service
+spec:
+  selector:
+    app: angular-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  type: LoadBalancer  # You can use NodePort or ClusterIP based on your needs

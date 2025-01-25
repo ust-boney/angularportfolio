@@ -1,0 +1,3 @@
+#contactusform input[type='text'], #contactusform textarea, #contactusform button{
+    border-radius: 12px;
+}

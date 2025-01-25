@@ -1,0 +1,6 @@
+li{
+    display: inline;
+    padding: 0 3px 0 4px;
+}
+
+li a {text-decoration: none;}

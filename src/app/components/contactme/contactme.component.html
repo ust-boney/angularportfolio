@@ -1,0 +1,19 @@
+<p>contactme works!</p>
+
+<form #contactusForm="ngForm" (ngSubmit)="sendRequest(contactusForm)">
+    <p>
+        <input type="text" placeholder="Full Name*" name="fullname" >
+    </p>
+    <p>
+       <input type="text" placeholder="Phone number*" name="phonenumber">
+    </p>
+    <p>
+        <input type="text" placeholder="Email*" name="email">
+    </p>
+    <p>
+        <textarea name="message" placeholder="Your message" id="" cols="30" rows="10"></textarea>
+    </p>
+    <p>
+        <button type="submit">Send a Request</button>
+    </p>
+</form>

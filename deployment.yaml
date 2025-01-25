@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: angular-app
+  labels:
+    app: angular-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: angular-app
+  template:
+    metadata:
+      labels:
+        app: angular-app
+    spec:
+      containers:
+        - name: angular-app
+          image: acrimageregistryust.azurecr.io/image-aks_demo_cicd  # Replace with your image name
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
