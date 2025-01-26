@@ -1,9 +1,18 @@
-<p>aboutme works!</p>
+<div class="main">
+    <div class="left-content">
+        <h4>Personal Info</h4>
+        <p>{{userDetails.fullName}} </p>
+        <p>{{userDetails.city}} </p>
 
-<p>{{userDetails.fullName}} </p>
+        <p>{{userDetails.phone}} </p>
+    </div>
 
-<p> {{userDetails.description}} </p>
+    <div class="right-content">
+        <h2 class="storyhead">My Story</h2>
+        <div class="user-story">
+            {{userDetails.description}}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem laboriosam et ut suscipit ipsam quibusdam provident tempora, quia velit earum, exercitationem consectetur facilis totam cupiditate minus vero laudantium harum! Corrupti voluptatum nihil itaque, expedita est culpa ducimus nobis velit, autem fugit deleniti tenetur distinctio atque eligendi facilis accusantium sint minima!
+        </div>
 
-<p>{{userDetails.city}} </p>
-
-<p>{{userDetails.phone}} </p>
+    </div>
+</div>

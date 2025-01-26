@@ -1,3 +1,38 @@
-#contactusform input[type='text'], #contactusform textarea, #contactusform button{
-    border-radius: 12px;
+input[type='text'], button{
+    border-radius: 25px;
+    border-color: #686868;
+    width: 50%;
+}
+input[type='text']{
+    background-color: #f4f4f4;
+    padding: 10px 25px;
+}
+button{
+    background-color: #686868;
+    color:#fff;
+    padding: 15px 25px;
+}
+button:hover{
+    background-color: #2a2121;
+}
+textarea{
+    border-radius: 25px;
+    border-color: #686868;
+    background-color: #f4f4f4;
+    padding: 10px 25px;
+    width: 50%;
+}
+.main{
+    display: flex;
+}
+.left-content{
+    flex: 1;
+}
+.right-content{
+    flex: 2;
+    background-color: #fff;
+    padding: 10px 20px;
+}
+h2.title{
+   color: #2a2121;
 }

@@ -1,0 +1,28 @@
+.main{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    
+}
+left-content{
+    /* flex: 1; */
+    width: 20%;
+    padding: 10px 20px;
+}
+.left-content span{
+ font-weight: 100;
+ color: #2a2121;
+}
+.right-content{
+    /* flex: 2; */
+    padding: 10px 20px;
+    width: 70%;
+}
+.user-story{
+   color: #5f5252;
+}
+.storyhead{
+    font-size: 48px;
+    font-weight: bold;
+   color: #2a2121;
+}

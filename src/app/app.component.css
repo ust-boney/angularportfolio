@@ -1,6 +1,36 @@
-li{
+li {
     display: inline;
-    padding: 0 3px 0 4px;
 }
 
-li a {text-decoration: none;}
+a {
+    text-decoration: none;
+    padding: 10px;
+    background-color: #464545;
+    color: #fff;
+    border-radius: 12px;
+    margin: 2px 5px;
+}
+
+a:hover {
+    background-color: #1b1818;
+    color: #fff;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+}
+
+.img-logo {
+    /* flex:1; */
+    width: 100px;
+    height: 100px;
+}
+
+.nav-links {
+    /* flex: 2; */
+    padding: 3px 7px;
+    ;
+}

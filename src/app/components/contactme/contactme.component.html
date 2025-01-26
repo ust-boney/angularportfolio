@@ -1,5 +1,9 @@
-<p>contactme works!</p>
 
+<div class="main">
+    <div class="left-content"></div>
+    <div class="right-content">
+<h2 class="title">Contact Me</h2>
+ 
 <form #contactusForm="ngForm" (ngSubmit)="sendRequest(contactusForm)">
     <p>
         <input type="text" placeholder="Full Name*" name="fullname" ngModel>
@@ -11,9 +15,12 @@
         <input type="text" placeholder="Email*" name="email" ngModel>
     </p>
     <p>
-        <textarea name="message" ngModel placeholder="Your message" id="" cols="30" rows="10"></textarea>
+        <textarea name="message" ngModel placeholder="Your message" id="" cols="40" rows="10"></textarea>
     </p>
     <p>
         <button type="submit">Send a Request</button>
     </p>
 </form>
+
+</div>
+</div>
