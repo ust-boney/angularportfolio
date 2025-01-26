@@ -12,8 +12,25 @@ export class ContactusService {
      this._http= httpRef;
    }
 
-  private apiUrl="";
-   sendContactRequest(userinfo: Userinfo){
-     return this._http.post(this.apiUrl,userinfo);
+  private apiContactRequestUrl="https://localhost:7034/api/contactrequests";
+  
+  sendEmailNotify(name:string,email:string, message:string){
+    let apiEmailNotifyUrl="https://emailackfuncapp.azurewebsites.net/api/HttpTriggerEmail?name="+name+"&email="+email+"&message="+message;
+    this._http.get(apiEmailNotifyUrl).subscribe(res=>{
+      console.log(res);
+      console.log("Your request has been submitted successfully!");
+    });
    }
+
+   sendContactRequest(userinfo: Userinfo){
+   
+    return this._http.post(this.apiContactRequestUrl,userinfo).subscribe(res=>{
+      console.log(res);
+      if(res){
+        this.sendEmailNotify(userinfo.FullName,userinfo.Email, userinfo.Message)
+      }
+    });
+   }
+
+ 
 }

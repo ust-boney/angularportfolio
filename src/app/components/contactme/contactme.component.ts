@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Userinfo } from '../../interfaces/userinfo';
 import { ContactusService } from '../../services/contactus.service';
+import { routes } from '../../app.routes';
 
 @Component({
   selector: 'app-contactme',
@@ -19,7 +20,7 @@ constructor(serviceRef: ContactusService){
 sendRequest(contactusForm:any){
   // service call to save request info in contactus table
   //upon success trigger call to function app url and send email
- let emailFunctionAppUrl="";
+
  let userinfo: Userinfo={
    FullName:contactusForm.value.fullname,
    PhoneNumber: contactusForm.value.phonenumber,
@@ -27,12 +28,7 @@ sendRequest(contactusForm:any){
    Message: contactusForm.value.message
  };
 
- this.contactusService.sendContactRequest(userinfo).subscribe(res=>{
-   console.log(res);
-   if(res){
-    
-   }
- });
+ let result= this.contactusService.sendContactRequest(userinfo);
 
-}
+ }
 }

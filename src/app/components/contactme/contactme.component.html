@@ -2,16 +2,16 @@
 
 <form #contactusForm="ngForm" (ngSubmit)="sendRequest(contactusForm)">
     <p>
-        <input type="text" placeholder="Full Name*" name="fullname" >
+        <input type="text" placeholder="Full Name*" name="fullname" ngModel>
     </p>
     <p>
-       <input type="text" placeholder="Phone number*" name="phonenumber">
+       <input type="text" placeholder="Phone number*" name="phonenumber" ngModel>
     </p>
     <p>
-        <input type="text" placeholder="Email*" name="email">
+        <input type="text" placeholder="Email*" name="email" ngModel>
     </p>
     <p>
-        <textarea name="message" placeholder="Your message" id="" cols="30" rows="10"></textarea>
+        <textarea name="message" ngModel placeholder="Your message" id="" cols="30" rows="10"></textarea>
     </p>
     <p>
         <button type="submit">Send a Request</button>
