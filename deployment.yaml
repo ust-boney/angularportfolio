@@ -16,7 +16,6 @@ spec:
     spec:
       containers:
         - name: angular-app
-          
           image: acrassessmentustregsitry.azurecr.io/angularportfolioapp:latest # Replace with your image name
           imagePullPolicy: Always
           ports:
