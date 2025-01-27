@@ -12,7 +12,7 @@ export class ContactusService {
      this._http= httpRef;
    }
 
-  private apiContactRequestUrl="https://localhost:7034/api/contactrequests";
+  private apiContactRequestUrl="https://requestinfoapi-fwa9ahd0fgaubtfz.eastus-01.azurewebsites.net/api/contactrequests";
   
   sendEmailNotify(name:string,email:string, message:string){
     let apiEmailNotifyUrl="https://emailackfuncapp.azurewebsites.net/api/HttpTriggerEmail?name="+name+"&email="+email+"&message="+message;

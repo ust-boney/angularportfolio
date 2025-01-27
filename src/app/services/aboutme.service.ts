@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 })
 export class AboutmeService {
 private _http:HttpClient;
-private profileApiUrl ="https://localhost:7255/";
+private profileApiUrl ="https://profileapi-h6dnb3fjg8brhhh9.eastus-01.azurewebsites.net/";
   constructor(httpRef:HttpClient) {
     this._http=httpRef;
    }
