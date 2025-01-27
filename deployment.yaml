@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: angular-app
-          image: acrimageregistryust.azurecr.io/image-aks_demo_cicd  # Replace with your image name
+          image: acrimageregistryust.azurecr.io/angularportfolioapp:latest  # Replace with your image name
           imagePullPolicy: Always
           ports:
             - containerPort: 80
